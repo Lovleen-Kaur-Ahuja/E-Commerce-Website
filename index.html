@@ -59,7 +59,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link nav-link-custom" href="#">
+                <a class="nav-link nav-link-custom" href="login.html">
                   <span class="fa fa-user"></span>
                 </a>
               </li>
@@ -517,30 +517,33 @@
           </div>
 
           <div class="col-lg-7 col-md-7 pt-lg-0 pt-md-0 pt-4">
-          <form>
+          <form id="form" method="post" name="myForm">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
+                  <span class="formerror"></span>
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" required>
+                  <span class="formerror"></span>
                 </div>
               </div>
 
               <div class="col-md-12">
                 <div class="form-group">
-                  <textarea class="textarea" name="message" cols="30" rows="4" id="message" placeholder="Enter Your Messgae"></textarea>
+                  <textarea class="textarea" name="message" cols="30" rows="4" id="message" placeholder="Enter Your Messgae" required></textarea>
                 </div>
               </div>
 
               <div class="col-md-12">
-                <button class="btn btn-danger">
+                <!-- <button class="btn btn-danger">
                   <span class="fa fa-rocket pe-2 fs-5"></span>Send Message
-                </button>
+                </button> -->
+                <input type="submit" class="btn btn-danger" value="Submit">
               </div>
             </div>
           </form>
@@ -570,10 +573,11 @@
     <div id="scrollUp" title="Scroll To Top">
       <a href="#header"><span class="ti-arrow-up fs-4 text-white"></span></a>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/float-panel.js"></script>
+    
   </body>
 </html>
