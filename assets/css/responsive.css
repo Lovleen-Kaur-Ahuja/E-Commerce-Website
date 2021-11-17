@@ -136,9 +136,111 @@
     margin: 0.5rem;
   }
 
+  /*Login CSS*/
+  .login-container {
+    min-height: 800px;
+    height: 100vh;
+  }
+  .signin-signup {
+    width: 100%;
+    top: 95%;
+    transform: translate(-50%, -100%);
+    transition: 1s 0.8s ease-in-out;
+  }
+
+  .signin-signup,
+  .login-container.sign-up-mode .signin-signup {
+    left: 50%;
+  }
+
+  .login-container .panels-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .login-container .panel {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+  }
+
+  .login-container .right-panel {
+    grid-row: 3 / 4;
+  }
+
+  .login-container .left-panel {
+    grid-row: 1 / 2;
+  }
+
+  .login-container .illus {
+    width: 200px;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+  }
+
+  .login-container .panel .content {
+    padding-right: 15%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+  }
+
+  .login-container .panel h3 {
+    font-size: 1.2rem;
+  }
+
+  .login-container .panel p {
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+
+  .login-container .btn.transparent {
+    width: 110px;
+    height: 35px;
+    font-size: 0.7rem;
+  }
+
+  .login-container:before {
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+
+  .login-container.sign-up-mode:before {
+    transform: translate(-50%, 100%);
+    bottom: 32%;
+    right: initial;
+  }
+
+  .login-container.sign-up-mode .left-panel .illus,
+  .login-container.sign-up-mode .left-panel .content {
+    transform: translateY(-300px);
+  }
+
+  .login-container.sign-up-mode .right-panel .illus,
+  .login-container.sign-up-mode .right-panel .content {
+    transform: translateY(0px);
+  }
+
+  .right-panel .image,
+  .right-panel .content {
+    transform: translateY(300px);
+  }
+
+  .login-container.sign-up-mode .signin-signup {
+    top: 5%;
+    transform: translate(-50%, 0);
+  }
+
 }
 
-@media (max-width: 330px){
+@media (max-width: 360px){
 	/*Home CSS*/
 
 	.home .home-banner .home-banner-text h2{
@@ -161,16 +263,41 @@
   	/*Details CSS*/
 
   .product-detail .right select {
-  width: 18rem;
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  appearance: none;
-  outline: none;
-}
+	  width: 18rem;
+	  padding: 0.7rem;
+	  border: 1px solid #ccc;
+	  appearance: none;
+	  outline: none;
+	}
 
-.product-detail .form .addCart {
+	.product-detail .form .addCart {
 
-  padding: 0.8rem 2rem;
+	  padding: 0.8rem 2rem;
 
-}
+	}
+
+	/*Login CSS*/
+	.login-container form {
+    padding: 0 1.5rem;
+  }
+
+  .login-container .illus {
+    display: none;
+  }
+  .login-container .panel .content {
+    padding: 0.5rem 1rem;
+  }
+  .login-container {
+    padding: 1.5rem;
+  }
+
+  .login-container:before {
+    bottom: 72%;
+    left: 50%;
+  }
+
+  .login-container.sign-up-mode:before {
+    bottom: 28%;
+    left: 50%;
+  }
 }
